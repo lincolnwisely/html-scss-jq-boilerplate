@@ -1,0 +1,21 @@
+{
+  "name": "Boilerplate",
+  "version": "1.0.0",
+  "description": "Supersimple boilerplate for one-offs",
+  "main": "main.js",
+  "scripts": {
+    "compile-scss": "node-sass ./style/scss/style.scss ./style/css/style.min.css --source-map true --output-style compressed",
+    "lint-scss": "stylelint \"style/**/*.scss\"",
+    "start": "nodemon --watch style -e scss --exec npm run compile-scss --exec npm run lint-scss"
+  },
+  "private": true,
+  "author": "Lincoln Webber-Wisely",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "nodemon": "^1.11.0",
+    "sass-lint": "^1.10.2",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0"
+  }
+}
